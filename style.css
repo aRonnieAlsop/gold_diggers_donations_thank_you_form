@@ -1,0 +1,1006 @@
+/*==================================================
+  GOLD DIGGERS THANK YOU GENERATOR
+  Indian Valley Chamber of Commerce
+  style.css
+===================================================*/
+
+/* Additional display and signature fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&display=swap');
+
+
+:root{
+
+    /* Editorial Palette */
+    --paper:#F5EFE4;
+    --paper-dark:#E9DFCF;
+    --black:#080808;
+    --charcoal:#141414;
+    --panel:#191919;
+    --line:#313131;
+
+    --gold:#B89146;
+    --gold-light:#D6B36A;
+
+    --text:#EFE8DC;
+    --text-dark:#1B1B1B;
+
+    --success:#58C98D;
+
+    --shadow:
+        0 35px 80px rgba(0,0,0,.45);
+
+}
+
+
+/*==================================
+RESET
+===================================*/
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:'IBM Plex Mono', monospace;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #222 0%,
+            #111 35%,
+            #080808 100%
+        );
+
+    color:var(--text);
+
+    line-height:1.75;
+
+}
+
+
+/*==================================
+TYPOGRAPHY
+===================================*/
+
+h1,
+h2,
+h3{
+
+    margin:0;
+
+    font-family:'Oswald',sans-serif;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+h1{
+    font-size:3rem;
+}
+
+h2{
+    font-size:2rem;
+}
+
+strong{
+
+    color:var(--gold);
+
+    font-weight:600;
+
+}
+
+
+/*==================================
+HEADER
+===================================*/
+
+.site-header{
+
+    padding:70px 30px 60px;
+
+    border-bottom:1px solid var(--line);
+
+    text-align:center;
+
+}
+
+.site-header__inner{
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+}
+
+.site-header__eyebrow{
+
+    color:var(--gold);
+
+    font-size:.85rem;
+
+    letter-spacing:.45em;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+.site-header__description{
+
+    max-width:720px;
+
+    margin:25px auto 0;
+
+    opacity:.85;
+
+}
+
+
+/*==================================
+LAYOUT
+===================================*/
+
+.generator-layout{
+
+    width:min(1600px,94%);
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:430px minmax(0,1fr);
+
+    gap:55px;
+
+}
+
+@media(max-width:1150px){
+
+    .generator-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/*==================================
+PANELS
+===================================*/
+
+.editor-panel,
+.preview-panel{
+
+    background:rgba(18,18,18,.95);
+
+    border:1px solid var(--line);
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+.panel-heading{
+
+    display:flex;
+
+    gap:25px;
+
+    padding:35px;
+
+    border-bottom:1px solid var(--line);
+
+}
+
+.panel-heading__number{
+
+    margin:0;
+
+    font-family:'Oswald',sans-serif;
+
+    color:var(--gold);
+
+    font-size:3rem;
+
+    line-height:1;
+
+}
+
+.panel-heading p:last-child{
+
+    opacity:.7;
+
+}
+
+
+/*==================================
+FORM
+===================================*/
+
+form{
+
+    padding:35px;
+
+}
+
+.form-group{
+
+    margin-bottom:30px;
+
+}
+
+label,
+legend{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-family:'Oswald',sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:1rem;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:8px;
+
+    border:1px solid #444;
+
+    background:#0D0D0D;
+
+    color:white;
+
+    font-family:'IBM Plex Mono',monospace;
+
+    font-size:1rem;
+
+    transition:.25s;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 0 0 2px rgba(184,145,70,.15);
+
+}
+
+.field-help{
+
+    margin-top:8px;
+
+    font-size:.8rem;
+
+    opacity:.65;
+
+}
+
+
+/*==================================
+RADIO CARDS
+===================================*/
+
+.delivery-options{
+
+    border:none;
+
+    padding:0;
+
+}
+
+.radio-card{
+
+    display:block;
+
+    margin-bottom:18px;
+
+}
+
+.radio-card input{
+
+    display:none;
+
+}
+
+.radio-card__content{
+
+    display:block;
+
+    padding:18px;
+
+    border:1px solid #333;
+
+    border-radius:8px;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+.radio-card input:checked + .radio-card__content{
+
+    border-color:var(--gold);
+
+    background:#101010;
+
+}
+
+.radio-card strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+}
+
+
+/*==================================
+BUTTONS
+===================================*/
+
+.button{
+
+    cursor:pointer;
+
+    border:none;
+
+    padding:17px 28px;
+
+    border-radius:6px;
+
+    font-family:'Oswald',sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:.95rem;
+
+    transition:.25s;
+
+}
+
+.button--primary{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+.button--primary:hover{
+
+    background:var(--gold-light);
+
+    transform:translateY(-2px);
+
+}
+
+.button--secondary{
+
+    background:#202020;
+
+    color:white;
+
+    border:1px solid #333;
+
+}
+
+.button--secondary:hover{
+
+    background:#2B2B2B;
+
+}
+
+.form-actions{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.output-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    padding:35px;
+
+}
+
+.output-button{
+
+    width:100%;
+
+}
+
+
+/*==================================
+THANK-YOU CARD
+===================================*/
+
+.thank-you-card{
+
+    /*
+      Wider display reduces browser downscaling
+      of the original high-resolution image.
+    */
+    width:min(1050px,94%);
+
+    margin:45px auto;
+
+    background:var(--paper);
+
+    color:var(--text-dark);
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.35);
+
+}
+
+
+/*==================================
+THANK-YOU IMAGE
+===================================*/
+
+.thank-you-card__image-wrap{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    background:#111;
+
+    /*
+      Prevents fractional browser rendering
+      around the image container.
+    */
+    transform:translateZ(0);
+
+}
+
+.thank-you-card__hero-image{
+
+    display:block;
+
+    width:100%;
+
+    /*
+      Keeps the original image proportions.
+      This is important for sharpness.
+    */
+    height:auto;
+
+    max-width:none;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    /*
+      Use the browser's highest-quality
+      photographic scaling.
+    */
+    image-rendering:auto;
+
+    /*
+      These help prevent soft rendering
+      caused by compositing and transforms.
+    */
+    transform:translateZ(0);
+
+    backface-visibility:hidden;
+
+    -webkit-backface-visibility:hidden;
+
+}
+
+
+/*==================================
+IMAGE OVERLAY
+===================================*/
+
+.thank-you-card__image-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    /*
+      Slightly lighter than before so details
+      in the historic photograph remain crisp.
+    */
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.10) 0%,
+            rgba(0,0,0,.22) 48%,
+            rgba(0,0,0,.42) 100%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================
+IMAGE TITLE
+===================================*/
+
+.thank-you-card__title-area{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    /*
+      A subtle shadow makes the letters clear
+      without darkening the entire photograph.
+    */
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.85),
+        0 0 18px rgba(0,0,0,.45);
+
+}
+
+.thank-you-card__event{
+
+    margin:0 0 12px;
+
+    font-family:'IBM Plex Mono',monospace;
+
+    letter-spacing:.35em;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.thank-you-card__title-area h2{
+
+    font-family:'Bebas Neue','Oswald',sans-serif;
+
+    font-size:4.75rem;
+
+    font-weight:400;
+
+    line-height:.95;
+
+    letter-spacing:.18em;
+
+}
+
+
+/*==================================
+THANK-YOU CONTENT
+===================================*/
+
+.thank-you-card__content{
+
+    padding:70px;
+
+}
+
+.thank-you-card__content p{
+
+    margin-top:0;
+
+    margin-bottom:26px;
+
+}
+
+.thank-you-card__recipient{
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:1.35rem;
+
+}
+
+.personalized-value{
+
+    color:#8D5A00;
+
+    font-weight:700;
+
+}
+
+.personal-note-paragraph{
+
+    padding:25px;
+
+    border-left:4px solid var(--gold);
+
+    background:#EEE5D4;
+
+}
+
+.is-hidden{
+
+    display:none;
+
+}
+
+
+/*==================================
+SIGNATURE
+===================================*/
+
+.thank-you-card__closing{
+
+    margin-top:38px;
+
+}
+
+.thank-you-card__closing > p:first-child{
+
+    margin-bottom:4px;
+
+}
+
+.signature-name{
+
+    margin-top:0;
+
+    margin-bottom:2px;
+
+    /*
+      Editorial handwritten signature style.
+    */
+    font-family:'Allura',cursive;
+
+    font-size:3.1rem;
+
+    font-weight:400;
+
+    line-height:1.05;
+
+    color:#8D5A00;
+
+    letter-spacing:.01em;
+
+}
+
+.signature-title{
+
+    margin-top:0;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:1rem;
+
+    letter-spacing:.04em;
+
+    opacity:.75;
+
+}
+
+.chamber-signature{
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+.chamber-signature__logo{
+
+    width:110px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 15px;
+
+    image-rendering:auto;
+
+}
+
+
+/*==================================
+FOOTER
+===================================*/
+
+.site-footer{
+
+    padding:70px 25px;
+
+    text-align:center;
+
+    opacity:.6;
+
+}
+
+.site-footer__logo{
+
+    width:70px;
+
+    height:auto;
+
+    margin-bottom:20px;
+
+}
+
+
+/*==================================
+STATUS
+===================================*/
+
+.status-message{
+
+    padding:0 35px 35px;
+
+    color:var(--success);
+
+    font-size:.9rem;
+
+}
+
+
+/*==================================
+TABLET
+===================================*/
+
+@media(max-width:800px){
+
+    .thank-you-card{
+
+        width:94%;
+
+    }
+
+    .thank-you-card__content{
+
+        padding:45px;
+
+    }
+
+    .thank-you-card__title-area h2{
+
+        font-size:3.8rem;
+
+    }
+
+    .output-actions{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/*==================================
+PHONE
+===================================*/
+
+@media(max-width:520px){
+
+    .site-header{
+
+        padding:50px 20px 40px;
+
+    }
+
+    h1{
+
+        font-size:2.15rem;
+
+    }
+
+    .generator-layout{
+
+        width:96%;
+
+        margin:30px auto;
+
+        gap:30px;
+
+    }
+
+    .panel-heading,
+    form,
+    .output-actions{
+
+        padding:25px;
+
+    }
+
+    .panel-heading{
+
+        gap:15px;
+
+    }
+
+    .panel-heading__number{
+
+        font-size:2.25rem;
+
+    }
+
+    .thank-you-card{
+
+        width:96%;
+
+        margin:25px auto;
+
+    }
+
+    .thank-you-card__content{
+
+        padding:30px 24px;
+
+    }
+
+    .thank-you-card__event{
+
+        font-size:.62rem;
+
+        letter-spacing:.24em;
+
+    }
+
+    .thank-you-card__title-area h2{
+
+        font-size:2.8rem;
+
+        letter-spacing:.12em;
+
+    }
+
+    .signature-name{
+
+        font-size:2.6rem;
+
+    }
+
+}
+
+
+/*==================================
+PRINT
+===================================*/
+
+@media print{
+
+    body{
+
+        background:white;
+
+    }
+
+    .site-header,
+    .editor-panel,
+    .output-actions,
+    .site-footer,
+    .privacy-note{
+
+        display:none;
+
+    }
+
+    .generator-layout{
+
+        display:block;
+
+        width:100%;
+
+        margin:0;
+
+    }
+
+    .preview-panel{
+
+        border:none;
+
+        box-shadow:none;
+
+        background:white;
+
+        overflow:visible;
+
+    }
+
+    .panel-heading{
+
+        display:none;
+
+    }
+
+    .thank-you-card{
+
+        width:100%;
+
+        max-width:1000px;
+
+        margin:0 auto;
+
+        box-shadow:none;
+
+        border-radius:0;
+
+    }
+
+    .thank-you-card__hero-image{
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+}

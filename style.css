@@ -50,7 +50,7 @@ body{
 
     margin:0;
 
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'IBM Plex Mono',monospace;
 
     background:
         radial-gradient(
@@ -471,10 +471,6 @@ THANK-YOU CARD
 
 .thank-you-card{
 
-    /*
-      Wider display reduces browser downscaling
-      of the original high-resolution image.
-    */
     width:min(1050px,94%);
 
     margin:45px auto;
@@ -507,12 +503,6 @@ THANK-YOU IMAGE
 
     background:#111;
 
-    /*
-      Prevents fractional browser rendering
-      around the image container.
-    */
-    transform:translateZ(0);
-
 }
 
 .thank-you-card__hero-image{
@@ -521,33 +511,15 @@ THANK-YOU IMAGE
 
     width:100%;
 
-    /*
-      Keeps the original image proportions.
-      This is important for sharpness.
-    */
     height:auto;
 
-    max-width:none;
+    max-width:100%;
 
     object-fit:contain;
 
     object-position:center;
 
-    /*
-      Use the browser's highest-quality
-      photographic scaling.
-    */
     image-rendering:auto;
-
-    /*
-      These help prevent soft rendering
-      caused by compositing and transforms.
-    */
-    transform:translateZ(0);
-
-    backface-visibility:hidden;
-
-    -webkit-backface-visibility:hidden;
 
 }
 
@@ -563,16 +535,10 @@ IMAGE OVERLAY
     inset:0;
 
     /*
-      Slightly lighter than before so details
-      in the historic photograph remain crisp.
+      No transparent background or gradient.
+      This removes the dark film from the image.
     */
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,.10) 0%,
-            rgba(0,0,0,.22) 48%,
-            rgba(0,0,0,.42) 100%
-        );
+    background:none;
 
     pointer-events:none;
 
@@ -597,19 +563,13 @@ IMAGE TITLE
 
     align-items:center;
 
-    color:white;
+    padding:30px;
+
+    color:#ffffff;
 
     text-align:center;
 
-    padding:30px;
-
-    /*
-      A subtle shadow makes the letters clear
-      without darkening the entire photograph.
-    */
-    text-shadow:
-        0 2px 5px rgba(0,0,0,.85),
-        0 0 18px rgba(0,0,0,.45);
+    pointer-events:none;
 
 }
 
@@ -627,6 +587,13 @@ IMAGE TITLE
 
     font-weight:600;
 
+    color:#ffffff;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,1),
+        0 0 8px rgba(0,0,0,.95),
+        0 0 16px rgba(0,0,0,.85);
+
 }
 
 .thank-you-card__title-area h2{
@@ -640,6 +607,13 @@ IMAGE TITLE
     line-height:.95;
 
     letter-spacing:.18em;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 3px 5px rgba(0,0,0,1),
+        0 0 10px rgba(0,0,0,.95),
+        0 0 22px rgba(0,0,0,.8);
 
 }
 
@@ -717,9 +691,6 @@ SIGNATURE
 
     margin-bottom:2px;
 
-    /*
-      Editorial handwritten signature style.
-    */
     font-family:'Allura',cursive;
 
     font-size:3.1rem;

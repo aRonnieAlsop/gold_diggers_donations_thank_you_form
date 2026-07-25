@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -15,28 +17,48 @@
 
   <title>Gold Diggers Thank-You Generator</title>
 
+
   <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
+
+  <!-- Main Stylesheet -->
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================================
+       PAGE HEADER
+  ========================================== -->
+
   <header class="site-header">
+
     <div class="site-header__inner">
 
       <p class="site-header__eyebrow">
         Indian Valley Chamber of Commerce
       </p>
 
-      <h1>Gold Diggers Thank-You Generator</h1>
+      <h1>
+        Gold Diggers Thank-You Generator
+      </h1>
 
       <p class="site-header__description">
         Enter the recipient and donation information below. Your personalized
@@ -44,33 +66,58 @@
       </p>
 
     </div>
+
   </header>
 
 
+
+  <!-- =========================================
+       MAIN GENERATOR
+  ========================================== -->
+
   <main class="generator-layout">
+
 
     <!-- =========================================
          FORM / EDITOR PANEL
     ========================================== -->
-    <section class="editor-panel" aria-labelledby="editor-title">
+
+    <section
+      class="editor-panel"
+      aria-labelledby="editor-title"
+    >
+
 
       <div class="panel-heading">
-        <p class="panel-heading__number">01</p>
+
+        <p class="panel-heading__number">
+          01
+        </p>
 
         <div>
-          <h2 id="editor-title">Personalize the Thank-You</h2>
+
+          <h2 id="editor-title">
+            Personalize the Thank-You
+          </h2>
 
           <p>
             Replace the example information with the business name and the
             specific donation they provided.
           </p>
+
         </div>
+
       </div>
+
 
 
       <form id="thankYouForm">
 
+
+        <!-- Business or Donor Name -->
+
         <div class="form-group">
+
           <label for="businessName">
             Business or Donor Name
           </label>
@@ -86,10 +133,15 @@
           <p class="field-help">
             Enter the business, organization, family, or individual being thanked.
           </p>
+
         </div>
 
 
+
+        <!-- Donation Description -->
+
         <div class="form-group">
+
           <label for="donationDescription">
             Donation Description
           </label>
@@ -105,10 +157,15 @@
             Examples: a handcrafted gift basket, two restaurant gift
             certificates, several raffle prizes, or a generous cash contribution.
           </p>
+
         </div>
 
 
+
+        <!-- Optional Personal Note -->
+
         <div class="form-group">
+
           <label for="personalNote">
             Optional Personal Note
           </label>
@@ -123,19 +180,27 @@
           <p class="field-help">
             Leave this blank to use only the standard Chamber message.
           </p>
+
         </div>
 
 
+
+        <!-- Delivery Options -->
+
         <fieldset class="form-group delivery-options">
 
-          <legend>How will this thank-you be used?</legend>
+          <legend>
+            How will this thank-you be used?
+          </legend>
 
           <p class="field-help">
             Choose an option so the page can prepare the most useful format.
           </p>
 
 
+
           <label class="radio-card">
+
             <input
               type="radio"
               name="deliveryMethod"
@@ -144,17 +209,24 @@
             >
 
             <span class="radio-card__content">
-              <strong>Download as an Image</strong>
+
+              <strong>
+                Download as an Image
+              </strong>
 
               <span>
                 Best for inserting into an email, sharing on Facebook, or
                 sending as a digital card.
               </span>
+
             </span>
+
           </label>
 
 
+
           <label class="radio-card">
+
             <input
               type="radio"
               name="deliveryMethod"
@@ -162,17 +234,24 @@
             >
 
             <span class="radio-card__content">
-              <strong>Copy for an Email</strong>
+
+              <strong>
+                Copy for an Email
+              </strong>
 
               <span>
                 Copies a complete thank-you message that can be pasted into
                 Gmail or another email service.
               </span>
+
             </span>
+
           </label>
 
 
+
           <label class="radio-card">
+
             <input
               type="radio"
               name="deliveryMethod"
@@ -180,17 +259,24 @@
             >
 
             <span class="radio-card__content">
-              <strong>Copy Plain Text</strong>
+
+              <strong>
+                Copy Plain Text
+              </strong>
 
               <span>
                 Best for simple emails, letters, records, or places where
                 formatting may not copy correctly.
               </span>
+
             </span>
+
           </label>
 
 
+
           <label class="radio-card">
+
             <input
               type="radio"
               name="deliveryMethod"
@@ -198,16 +284,24 @@
             >
 
             <span class="radio-card__content">
-              <strong>Print or Save as PDF</strong>
+
+              <strong>
+                Print or Save as PDF
+              </strong>
 
               <span>
                 Creates a printable version that can also be saved as a PDF.
               </span>
+
             </span>
+
           </label>
 
         </fieldset>
 
+
+
+        <!-- Form Buttons -->
 
         <div class="form-actions">
 
@@ -232,6 +326,9 @@
       </form>
 
 
+
+      <!-- Status Message -->
+
       <div
         id="statusMessage"
         class="status-message"
@@ -239,121 +336,158 @@
         aria-live="polite"
       ></div>
 
+
     </section>
+
 
 
     <!-- =========================================
          PREVIEW PANEL
     ========================================== -->
-    <section class="preview-panel" aria-labelledby="preview-title">
+
+    <section
+      class="preview-panel"
+      aria-labelledby="preview-title"
+    >
+
 
       <div class="panel-heading panel-heading--preview">
-        <p class="panel-heading__number">02</p>
+
+        <p class="panel-heading__number">
+          02
+        </p>
 
         <div>
-          <h2 id="preview-title">Preview</h2>
+
+          <h2 id="preview-title">
+            Preview
+          </h2>
 
           <p>
             Check the recipient and donation information before downloading,
             copying, or printing.
           </p>
+
         </div>
+
       </div>
 
 
+
       <!--
-        This complete card will later be converted into a downloadable image.
+        This complete card will be converted into a downloadable image.
       -->
+
       <article
         id="thankYouCard"
         class="thank-you-card"
         aria-label="Personalized Gold Diggers thank-you"
       >
 
+
+        <!-- Complete Header Image -->
+
         <div class="thank-you-card__image-wrap">
 
           <img
             src="gd.png"
-            alt="Historic Gold Diggers miners holding colorful raffle prizes"
+            alt="Gold Diggers Days 2026 thank-you featuring historic miners holding colorful raffle prizes"
             class="thank-you-card__hero-image"
           >
-
-          <div class="thank-you-card__image-overlay"></div>
-
-          <div class="thank-you-card__title-area">
-
-            <p class="thank-you-card__event">
-              Gold Diggers Days 2026
-            </p>
-
-            <h2>Thank You</h2>
-
-          </div>
 
         </div>
 
 
+
+        <!-- Thank-You Letter -->
+
         <div class="thank-you-card__content">
 
+
           <p class="thank-you-card__recipient">
+
             Dear
+
             <span
               id="previewBusinessName"
               class="personalized-value"
             >
               [Business or Donor Name]
             </span>,
+
           </p>
 
 
+
           <p>
+
             On behalf of Jennifer Ann Meyers and the Indian Valley Chamber of
             Commerce, thank you for your generous donation of
+
             <strong
               id="previewDonationDescription"
               class="personalized-value"
             >
               [donation description]
             </strong>
+
             to the 2026 Gold Diggers Days raffle.
+
           </p>
+
 
 
           <p
             id="previewPersonalNoteParagraph"
             class="personal-note-paragraph is-hidden"
           >
+
             <span id="previewPersonalNote"></span>
+
           </p>
 
 
+
           <p>
+
             Your support helped create excitement throughout the event while
             raising funds that allow the Chamber to continue organizing
             community events that bring people together and support the future
             of Indian Valley.
+
           </p>
 
 
+
           <p>
+
             As Greenville continues to rebuild, celebrations like Gold Diggers
             Days remind us why this community is so special. Because of
             businesses like yours, neighbors, families, and visitors were able
             to spend the day making memories, supporting local businesses, and
             celebrating the resilience and spirit of our valley.
+
           </p>
+
 
 
           <p>
+
             We are sincerely grateful that you chose to be part of this year's
             event. Your generosity helped make Gold Diggers Days a success,
             and we look forward to working together again in the future.
+
           </p>
 
 
+
+          <!-- Signature -->
+
           <div class="thank-you-card__closing">
 
-            <p>With heartfelt thanks,</p>
+            <p>
+              With heartfelt thanks,
+            </p>
 
             <p class="signature-name">
               Jennifer Ann Meyers
@@ -364,6 +498,7 @@
             </p>
 
 
+
             <div class="chamber-signature">
 
               <img
@@ -372,21 +507,27 @@
                 class="chamber-signature__logo"
               >
 
-              <p>Indian Valley Chamber of Commerce</p>
+              <p>
+                Indian Valley Chamber of Commerce
+              </p>
 
             </div>
 
           </div>
+
 
         </div>
 
       </article>
 
 
+
       <!-- =========================================
            OUTPUT BUTTONS
       ========================================== -->
+
       <div class="output-actions">
+
 
         <button
           type="button"
@@ -396,6 +537,7 @@
           Download as PNG
         </button>
 
+
         <button
           type="button"
           id="copyEmailButton"
@@ -403,6 +545,7 @@
         >
           Copy Email Version
         </button>
+
 
         <button
           type="button"
@@ -412,6 +555,7 @@
           Copy Plain Text
         </button>
 
+
         <button
           type="button"
           id="printButton"
@@ -420,18 +564,29 @@
           Print or Save as PDF
         </button>
 
+
       </div>
 
 
+
       <p class="privacy-note">
+
         The information entered on this page stays in the browser and is not
         submitted or stored online.
+
       </p>
+
 
     </section>
 
+
   </main>
 
+
+
+  <!-- =========================================
+       PAGE FOOTER
+  ========================================== -->
 
   <footer class="site-footer">
 
@@ -448,17 +603,16 @@
   </footer>
 
 
+
   <!--
-    html2canvas will allow the thank-you card to be downloaded as a PNG.
+    html2canvas allows the thank-you card to be downloaded as a PNG.
   -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-    integrity="sha512-BNa5TBzD4B2bVQnJvF2jSBwJy06Q2MjXxkbUcxnGgQJhZHbYqZ8rF+fh6Ma6J1S68WJZsE+LEdysRQ5M3kYAYw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
   <script src="script.js"></script>
 
+
 </body>
+
 </html>
